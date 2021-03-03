@@ -1,13 +1,11 @@
 {
-	"version": "1",
-	"files": {
-		
-
-	},
-	"lists": [{
-
-	}],
-	"maps": [
-	]
-
+  "version": "1",
+  "lists": [
+    {
+      "requests": "Hexatown%20Requests",
+      "log": "Hexatown%20Log",
+      "properties": "Hexatown%20Properties"
+    }
+  ]
+ 
 }

@@ -1,6 +1,40 @@
 
 . "$PSScriptRoot\.hexatown.com.ps1"                # Load the Hexatown framework
 #region Setup - Initial code for hooking you up, you can remove this region once it has runned ...
+<#
+
+WELCOME TO HEXATOWN DEAR HEXA CITIZEN !!
+
+Get started
+
+1. Run this script by hitting F5 (Run)
+   a. You will be ask to authenticate your self and grant Manage Site permission to Hexatown
+   b.
+   c.
+
+
+
+Regards,
+Reach out on Twitter @niegrejoh or using https://www.linkedin.com/in/niels-gregers-johansen/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#>
+
+
+
 $hexatown = Start-Hexatown  $myInvocation  "Sites.Manage.All"  @{connectToSharePoint=$false;SkipTranscript=$true}      # Start the framework
 function HexatownListRequests{
 return @'

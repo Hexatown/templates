@@ -420,7 +420,7 @@ if ("https://xxxxxxx.sharepoint.com/sites/hexatown" -eq $hexatown.siteUrl){
     }
     
     $site = &  "$PSScriptRoot\..\..\pages\select-sharepoint-site.ps1"  $sites
-    exit
+    
     if (!$site){
         write-host "No site selected, exiting ..."  -ForegroundColor DarkRed
         exit

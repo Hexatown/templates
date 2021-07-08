@@ -14,9 +14,9 @@ if (!$isAdmin){
 
 $package = (Get-Content (join-path $PSScriptRoot "..\..\..\package.json") -raw) | ConvertFrom-Json
 
-$username =  $package.name 
+$username =  "hexa-$($package.name)"
 $passwordInText = "Hex@t0wn"
-$jobName = $package.name
+$jobName = "Hexatown $($package.name)"
 #$scriptToRun = "every-day"
 #$startAt = "21:00"
 #$interval = (New-TimeSpan -Days 1)

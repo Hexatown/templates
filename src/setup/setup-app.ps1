@@ -35,7 +35,7 @@ if ($null -eq $environment.AADDOMAIN){
 
 if ($null -eq $environment.APPCLIENT_ID -or $force){
     $authdata = & "$PSScriptRoot\create-aad-app.ps1"
-    SetEnv $environment "APPCLIENT_ID"  $authdata.appID
+    SetEnv $environment "APPCLIENT_ID"  $authdata.appID.Substring(0,36)
     SetEnv $environment "APPCLIENT_SECRET"  $authdata.secret.Value
     SetEnv $environment "APPCLIENT_DOMAIN"  $authdata.tenantID
     

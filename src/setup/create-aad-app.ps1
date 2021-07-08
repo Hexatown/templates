@@ -27,6 +27,8 @@ catch [Microsoft.Open.Azure.AD.CommonLibrary.AadNeedAuthenticationException]
 
 
 
+
+
 $packageName = (Get-Content "$PSScriptRoot\..\..\package.json" | ConvertFrom-Json).name
 
 $appName = "Hexatown-$packageName"
@@ -54,9 +56,8 @@ $myApp = New-AzureADApplication -DisplayName $appName -ReplyUrls 'https://www.ju
 ## Enable the Service Principal
 # $mySP = New-AzureADServicePrincipal -AppID $myApp.AppID
 
-$startDate = Get-Date
-$endDate = $startDate.AddYears(1)
-$aadAppsecret01 = New-AzureADApplicationPasswordCredential -ObjectId $myApp.ObjectID -CustomKeyIdentifier "Secret01" -EndDate $endDate # -StartDate $startDate 
+
+$aadAppsecret01 = New-AzureADApplicationPasswordCredential -ObjectId $myApp.ObjectID -CustomKeyIdentifier "Secret01" 
 
 $tenantID = (Get-AzureADTenantDetail).ObjectID
 

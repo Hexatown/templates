@@ -1,0 +1,191 @@
+﻿{
+    "list":  {
+                 "hidden":  false,
+                 "template":  "genericList",
+                 "contentTypesEnabled":  false
+             },
+    "description":  "Used by the www.hexatown.com framework for logging",
+    "displayName":  "Hexatown Log",
+    "columns":  [
+                    {
+                        "columnGroup":  "Custom Columns",
+                        "description":  "",
+                        "displayName":  "System",
+                        "enforceUniqueValues":  false,
+                        "hidden":  false,
+                        "id":  "264fccd0-256c-44e6-9740-7c4774de5c71",
+                        "indexed":  false,
+                        "name":  "System",
+                        "readOnly":  false,
+                        "required":  false,
+                        "text":  {
+                                     "allowMultipleLines":  false,
+                                     "appendChangesToExistingText":  false,
+                                     "linesForEditing":  0,
+                                     "maxLength":  255
+                                 }
+                    },
+                    {
+                        "columnGroup":  "Custom Columns",
+                        "description":  "",
+                        "displayName":  "Sub System",
+                        "enforceUniqueValues":  false,
+                        "hidden":  false,
+                        "id":  "d4340eb4-bb24-4da5-b2e4-3ac3ae9c9840",
+                        "indexed":  false,
+                        "name":  "SubSystem",
+                        "readOnly":  false,
+                        "required":  false,
+                        "text":  {
+                                     "allowMultipleLines":  false,
+                                     "appendChangesToExistingText":  false,
+                                     "linesForEditing":  0,
+                                     "maxLength":  255
+                                 }
+                    },
+                    {
+                        "columnGroup":  "Custom Columns",
+                        "description":  "",
+                        "displayName":  "Status",
+                        "enforceUniqueValues":  false,
+                        "hidden":  false,
+                        "id":  "74c013d2-09eb-4fde-a6f8-eb70d316fe2f",
+                        "indexed":  false,
+                        "name":  "Status",
+                        "readOnly":  false,
+                        "required":  false,
+                        "text":  {
+                                     "allowMultipleLines":  false,
+                                     "appendChangesToExistingText":  false,
+                                     "linesForEditing":  0,
+                                     "maxLength":  255
+                                 }
+                    },
+                    {
+                        "columnGroup":  "Custom Columns",
+                        "description":  "",
+                        "displayName":  "Quantity",
+                        "enforceUniqueValues":  false,
+                        "hidden":  false,
+                        "id":  "b8ad85c9-cecc-42b5-818b-5649b9cc88e3",
+                        "indexed":  false,
+                        "name":  "Quantity",
+                        "readOnly":  false,
+                        "required":  false,
+                        "number":  {
+                                       "decimalPlaces":  "none",
+                                       "displayAs":  "number",
+                                       "maximum":  1.7976931348623157E+308,
+                                       "minimum":  -1.7976931348623157E+308
+                                   }
+                    },
+                    {
+                        "columnGroup":  "Custom Columns",
+                        "description":  "",
+                        "displayName":  "System Reference",
+                        "enforceUniqueValues":  false,
+                        "hidden":  false,
+                        "id":  "6147e4d6-8a60-45d8-a570-7776a6282091",
+                        "indexed":  false,
+                        "name":  "SystemReference",
+                        "readOnly":  false,
+                        "required":  false,
+                        "text":  {
+                                     "allowMultipleLines":  false,
+                                     "appendChangesToExistingText":  false,
+                                     "linesForEditing":  0,
+                                     "maxLength":  255
+                                 }
+                    },
+                    {
+                        "columnGroup":  "Custom Columns",
+                        "description":  "",
+                        "displayName":  "Details",
+                        "enforceUniqueValues":  false,
+                        "hidden":  false,
+                        "id":  "838cf440-742c-4421-abf8-f92cf62be072",
+                        "indexed":  false,
+                        "name":  "Details",
+                        "readOnly":  false,
+                        "required":  false,
+                        "text":  {
+                                     "allowMultipleLines":  true,
+                                     "appendChangesToExistingText":  false,
+                                     "linesForEditing":  6,
+                                     "textType":  "plain"
+                                 }
+                    },
+                    {
+                        "columnGroup":  "Custom Columns",
+                        "description":  "",
+                        "displayName":  "Host",
+                        "enforceUniqueValues":  false,
+                        "hidden":  false,
+                        "id":  "33296ef2-9877-47b5-887e-e451bcb95d3d",
+                        "indexed":  false,
+                        "name":  "Host",
+                        "readOnly":  false,
+                        "required":  false,
+                        "text":  {
+                                     "allowMultipleLines":  false,
+                                     "appendChangesToExistingText":  false,
+                                     "linesForEditing":  0,
+                                     "maxLength":  255
+                                 }
+                    },
+                    {
+                        "columnGroup":  "Custom Columns",
+                        "description":  "",
+                        "displayName":  "Identifier",
+                        "enforceUniqueValues":  false,
+                        "hidden":  false,
+                        "id":  "70e599ef-5cb0-47bf-9eb1-d8a41c58e0ff",
+                        "indexed":  false,
+                        "name":  "Identifier",
+                        "readOnly":  false,
+                        "required":  false,
+                        "text":  {
+                                     "allowMultipleLines":  false,
+                                     "appendChangesToExistingText":  false,
+                                     "linesForEditing":  0,
+                                     "maxLength":  255
+                                 }
+                    },
+                    {
+                        "columnGroup":  "Custom Columns",
+                        "description":  "",
+                        "displayName":  "Workflow",
+                        "enforceUniqueValues":  false,
+                        "hidden":  false,
+                        "id":  "218c7ce7-8331-4611-a8ba-27f545886f51",
+                        "indexed":  false,
+                        "name":  "Workflow",
+                        "readOnly":  false,
+                        "required":  false,
+                        "text":  {
+                                     "allowMultipleLines":  false,
+                                     "appendChangesToExistingText":  false,
+                                     "linesForEditing":  0,
+                                     "maxLength":  255
+                                 }
+                    },
+                    {
+                        "columnGroup":  "Custom Columns",
+                        "description":  "",
+                        "displayName":  "Quantifier",
+                        "enforceUniqueValues":  false,
+                        "hidden":  false,
+                        "id":  "5f555ee6-a0d3-4517-a9a5-4ed31fdef221",
+                        "indexed":  false,
+                        "name":  "Quantifier",
+                        "readOnly":  false,
+                        "required":  false,
+                        "text":  {
+                                     "allowMultipleLines":  false,
+                                     "appendChangesToExistingText":  false,
+                                     "linesForEditing":  0,
+                                     "maxLength":  255
+                                 }
+                    }
+                ]
+}

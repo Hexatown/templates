@@ -1,0 +1,29 @@
+﻿{
+    "list":  {
+                 "hidden":  false,
+                 "template":  "genericList",
+                 "contentTypesEnabled":  false
+             },
+    "description":  "Used by the www.hexatown.com framework for storing key/values",
+    "displayName":  "Hexatown Properties",
+    "columns":  [
+                    {
+                        "columnGroup":  "Custom Columns",
+                        "description":  "",
+                        "displayName":  "Value",
+                        "enforceUniqueValues":  false,
+                        "hidden":  false,
+                        "id":  "4dba1756-c6c5-4e9d-af66-62fd67f4ec69",
+                        "indexed":  false,
+                        "name":  "Value",
+                        "readOnly":  false,
+                        "required":  false,
+                        "text":  {
+                                     "allowMultipleLines":  true,
+                                     "appendChangesToExistingText":  false,
+                                     "linesForEditing":  6,
+                                     "textType":  "plain"
+                                 }
+                    }
+                ]
+}

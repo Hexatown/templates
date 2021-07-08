@@ -1,0 +1,137 @@
+﻿{
+    "list":  {
+                 "hidden":  false,
+                 "template":  "genericList",
+                 "contentTypesEnabled":  false
+             },
+    "description":  "",
+    "displayName":  "Hexatown Requests",
+    "columns":  [
+                    {
+                        "columnGroup":  "Custom Columns",
+                        "description":  "",
+                        "displayName":  "Path",
+                        "enforceUniqueValues":  false,
+                        "hidden":  false,
+                        "id":  "20c949c5-8b77-4a09-a1ff-3308614c4250",
+                        "indexed":  false,
+                        "name":  "Path",
+                        "readOnly":  false,
+                        "required":  false,
+                        "text":  {
+                                     "allowMultipleLines":  false,
+                                     "appendChangesToExistingText":  false,
+                                     "linesForEditing":  0,
+                                     "maxLength":  255
+                                 }
+                    },
+                    {
+                        "columnGroup":  "Custom Columns",
+                        "description":  "",
+                        "displayName":  "Method",
+                        "enforceUniqueValues":  false,
+                        "hidden":  false,
+                        "id":  "87a522c3-c1b9-4cb2-9186-a61a808fcfa2",
+                        "indexed":  false,
+                        "name":  "Method",
+                        "readOnly":  false,
+                        "required":  false,
+                        "text":  {
+                                     "allowMultipleLines":  false,
+                                     "appendChangesToExistingText":  false,
+                                     "linesForEditing":  0,
+                                     "maxLength":  255
+                                 }
+                    },
+                    {
+                        "columnGroup":  "Custom Columns",
+                        "description":  "",
+                        "displayName":  "Request",
+                        "enforceUniqueValues":  false,
+                        "hidden":  false,
+                        "id":  "1da9346f-9cf4-4b2e-be6b-ec7c2c1d5526",
+                        "indexed":  false,
+                        "name":  "Request",
+                        "readOnly":  false,
+                        "required":  false,
+                        "text":  {
+                                     "allowMultipleLines":  true,
+                                     "appendChangesToExistingText":  false,
+                                     "linesForEditing":  6,
+                                     "textType":  "plain"
+                                 }
+                    },
+                    {
+                        "columnGroup":  "Custom Columns",
+                        "description":  "",
+                        "displayName":  "Response",
+                        "enforceUniqueValues":  false,
+                        "hidden":  false,
+                        "id":  "368380af-6534-4672-b6d2-6534fa9d9595",
+                        "indexed":  false,
+                        "name":  "Response",
+                        "readOnly":  false,
+                        "required":  false,
+                        "text":  {
+                                     "allowMultipleLines":  true,
+                                     "appendChangesToExistingText":  false,
+                                     "linesForEditing":  6,
+                                     "textType":  "plain"
+                                 }
+                    },
+                    {
+                        "columnGroup":  "Custom Columns",
+                        "description":  "",
+                        "displayName":  "Processed",
+                        "enforceUniqueValues":  false,
+                        "hidden":  false,
+                        "id":  "cbaf11a6-3ea7-4825-9ce0-1a61276c07c5",
+                        "indexed":  false,
+                        "name":  "Processed",
+                        "readOnly":  false,
+                        "required":  false,
+                        "boolean":  {
+
+                                    },
+                        "defaultValue":  {
+                                             "value":  "0"
+                                         }
+                    },
+                    {
+                        "columnGroup":  "Custom Columns",
+                        "description":  "",
+                        "displayName":  "Response code",
+                        "enforceUniqueValues":  false,
+                        "hidden":  false,
+                        "id":  "d522d20e-d45d-4855-9cba-bc17f023fe13",
+                        "indexed":  false,
+                        "name":  "Responsecode",
+                        "readOnly":  false,
+                        "required":  false,
+                        "number":  {
+                                       "decimalPlaces":  "none",
+                                       "displayAs":  "number",
+                                       "maximum":  1.7976931348623157E+308,
+                                       "minimum":  -1.7976931348623157E+308
+                                   }
+                    },
+                    {
+                        "columnGroup":  "Custom Columns",
+                        "description":  "",
+                        "displayName":  "Response CSV",
+                        "enforceUniqueValues":  false,
+                        "hidden":  false,
+                        "id":  "f99af6b2-02d7-44c3-a410-980ea874931b",
+                        "indexed":  false,
+                        "name":  "ResponseCSV",
+                        "readOnly":  false,
+                        "required":  false,
+                        "text":  {
+                                     "allowMultipleLines":  true,
+                                     "appendChangesToExistingText":  false,
+                                     "linesForEditing":  6,
+                                     "textType":  "plain"
+                                 }
+                    }
+                ]
+}

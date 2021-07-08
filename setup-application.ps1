@@ -1,0 +1,1 @@
+. "$PSScriptRoot\src\setup\setup-app.ps1"  

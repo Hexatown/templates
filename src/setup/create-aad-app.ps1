@@ -57,7 +57,7 @@ $myApp = New-AzureADApplication -DisplayName $appName -ReplyUrls 'https://www.ju
 # $mySP = New-AzureADServicePrincipal -AppID $myApp.AppID
 
 
-$aadAppsecret01 = New-AzureADApplicationPasswordCredential -ObjectId $myApp.ObjectID -CustomKeyIdentifier "Secret01" 
+$aadAppsecret01 = New-AzureADApplicationPasswordCredential -ObjectId $myApp.ObjectID -CustomKeyIdentifier "Secret01" -EndDate  (Get-Date).AddDays(180)
 
 $tenantID = (Get-AzureADTenantDetail).ObjectID
 
@@ -76,6 +76,7 @@ return  @{
    consentUrl = "https://login.microsoftonline.com/$tenantID/adminconsent?client_id=$($myApp.AppID)"
    tenantID = $tenantID
    appID =$myApp.AppID
+   appObjectId = =$myApp.ObjectId
    domainName=$domainName
    secret = $aadAppsecret01
 }

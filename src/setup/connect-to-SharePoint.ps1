@@ -1,5 +1,4 @@
-﻿
-function HexatownListRequests{
+﻿function HexatownListRequests{
 return @'
 {
     "description":  "Used by the www.hexatown.com framework for requesting a batch process to run ",        
@@ -410,33 +409,3 @@ return @{
     siteUrl=$($site.webUrl)
 
 }
-<#
-        start ($lists | where {$_.name -eq "Hexatown Requests" } ).webUrl
-    $package = get-content -path (join-path $PSScriptRoot "../../../package.json") | ConvertFrom-Json
-
-    $environmentPath = $env:HEXATOWNHOME
-    if ($null -eq $environmentPath ) {
-        $environmentPath = ([System.Environment]::GetFolderPath([System.Environment+SpecialFolder]::CommonApplicationData)) 
-    }
-    $path = "$environmentPath/hexatown.com/$($package.name)"
-
-    $envFileName = join-path $path ".env"
-    out-file -FilePath $envFileName -InputObject @"
-DEVELOP=1
-SITEURL=$($site.webUrl)
-AADDOMAIN=PROD
-
-
-"@
-
-
-
-##    }
-
-    
-
-
-
-#endregion
-
-#>

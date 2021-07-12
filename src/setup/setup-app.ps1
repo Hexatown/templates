@@ -24,25 +24,27 @@ write-host "Creating Azure AD Application Registration "
 get-variable    -Scope Global | where {$_.Name -eq "hexatown"} | Remove-Variable -Scope Global
 
 $environment = GetEnvironmentConfig
+<#
 if ($null -eq $environment.AADDOMAIN){
     SetEnv $environment "AADDOMAIN"  "Production"
     UpdateEnv $environment
 
 }
-
+#>
 
 
 
 if ($null -eq $environment.APPCLIENT_ID -or $force){
     $authdata = & "$PSScriptRoot\create-aad-app.ps1"
+    SetEnv $environment "AADDOMAIN"  $authdata.domainName
     SetEnv $environment "APPCLIENT_ID"  $authdata.appID.Substring(0,36)
     SetEnv $environment "APPCLIENT_SECRET"  $authdata.secret.Value
-    SetEnv $environment "APPCLIENT_DOMAIN"  $authdata.tenantID
+    SetEnv $environment "APPCLIENT_DOMAIN"  $authdata.tenantID.Substring(0,36)
     
     UpdateEnv $environment
 
     Set-Clipboard -Value $authdata.consentUrl
-    write-host "Ask your Global Admin to open this link"
+    write-host "Ask your Global Admin to open this link to consent"
     write-host ""
     write-host $authdata.consentUrl
     Write-Host ""

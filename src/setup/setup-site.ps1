@@ -13,8 +13,22 @@ $invocation = @{
     Path = (Resolve-Path (join-path $PSScriptRoot "\..\jobs\powershell\index.ps1")).Path
     }
 }
-
+try
+{
 $hexatown = Start-HexatownApp  $invocation  $setupOptions   # Start the framework
+}
+
+catch [System.Net.WebException],[System.Exception]
+{
+    Write-Host $_ -ForegroundColor Red
+
+}
+if ($null -eq $hexatown){
+    return
+}
+
+
+
 
 function CreateList($hexatown, $siteUrl,$definition) {
 

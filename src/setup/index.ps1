@@ -1,4 +1,4 @@
-param ($force = $false, $setupApp = $false, $setupSharePoint = $false)
+param ($force = $false, $setupApp = $true, $setupSharePoint = $true)
 . "$PSScriptRoot\.setup.helper.ps1"
 
 
@@ -12,12 +12,13 @@ if (!$isAdmin){
     write-host "Start PowerShell in admin mode"
     Start-Sleep 1
     $arguments = "-NoExit -file ""$fileToRun `$force `$setupApp `$setupSharePoint"" "
-    write-host $arguments
-    exit
+    # write-host $arguments
+    
     Start-Process powershell -Verb runas -ArgumentList $arguments
     exit 
 }
-    Start-Sleep 10
+    # Start-Sleep 10
+
 function SetEnv($environment,$key,$value){
     if ($environment.ContainsKey($key)){
     $environment.$key = $value
@@ -39,15 +40,11 @@ catch
 #>  
 
 get-variable    -Scope Global | where {$_.Name -eq "hexatown"} | Remove-Variable -Scope Global
-
 $environment = GetEnvironmentConfig
-if ($null -eq $environment.AADDOMAIN){
-    SetEnv $environment "AADDOMAIN"  "Production"
-    UpdateEnv $environment
-
-}
 
 if ($setupSharePoint -and ($null -eq $environment.SITEURL -or $force)){
+    #& "$PSScriptRoot\setup-site.ps1"  -force $force
+    #<#
     $setupScope = "Sites.Manage.All"
     $setupOptions = @{
     connectToSharePoint=$false;
@@ -64,28 +61,11 @@ if ($setupSharePoint -and ($null -eq $environment.SITEURL -or $force)){
     UpdateEnv $environment
     }else{
         write-host "SharePoint connection already configured"     -ForegroundColor Gray
-}
-
-
-
-if ($setupApp -and ($null -eq $environment.EXCHAPPID -or $force)){
-    $authdata = & "$PSScriptRoot\create-aad-app.ps1"
-    SetEnv $environment "EXCHAPPID"  $authdata.appID
-    SetEnv $environment "EXCHORGANIZATION"  $authdata.domainName
-    SetEnv $environment "EXCHCERTIFICATEPATH"  $authdata.certPath
-    SetEnv $environment "EXCHCERTIFICATEPASSWORD"  $authdata.certPassword
-    SetEnv $environment "APPCLIENT_ID"  $authdata.appID
-    SetEnv $environment "APPCLIENT_SECRET"  $authdata.secret.Value
-    SetEnv $environment "APPCLIENT_DOMAIN"  $authdata.tenantID
-    
-    UpdateEnv $environment
-}else{
-    write-host "Environment already configured"     -ForegroundColor Gray
-}
-
-<#
-Connect-ExchangeOnline -CertificateFilePath  $PrivateCertificateFilePath `
--CertificatePassword (ConvertTo-SecureString -String $Password -AsPlainText -Force) `
--AppID $appID `
--Organization "365adm.onmicrosoft.com"
 #>
+}
+
+
+
+if ($setupApp){
+    & "$PSScriptRoot\setup-app.ps1"  -force $force
+}

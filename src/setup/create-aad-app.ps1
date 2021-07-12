@@ -70,13 +70,14 @@ foreach ($domain in get-azureaddomain )
     
 }
 
-
+Write-host "Waiting for App registration to get ready"
+Start-Sleep -Seconds 15 
 return  @{
 
    consentUrl = "https://login.microsoftonline.com/$tenantID/adminconsent?client_id=$($myApp.AppID)"
    tenantID = $tenantID
    appID =$myApp.AppID
-   appObjectId = =$myApp.ObjectId
+   appObjectId = $myApp.ObjectId
    domainName=$domainName
    secret = $aadAppsecret01
 }

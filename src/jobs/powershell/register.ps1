@@ -38,7 +38,7 @@ function RegisterJob($jobname,$scriptname,$credential,$startAt,$repetitionInterv
     Register-ScheduledJob -Name $jobname -ArgumentList $psscriptroot,$scriptname  -Trigger $trigger1 ,$trigger2   -ScriptBlock {
         param($psscriptroot,$scriptname)
         . "$psscriptroot\$scriptname.ps1"
-    } -Credential $credential 
+    } -Credential $credential | out-null
 
 }
 

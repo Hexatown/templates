@@ -1,4 +1,4 @@
-param ($force = $false, $setupApp = $true, $setupSharePoint = $true)
+param ($force = $false, $setupApp = $true, $setupSharePoint = $true,$setupScheduler=$true)
 . "$PSScriptRoot\.setup.helper.ps1"
 
 
@@ -68,4 +68,8 @@ if ($setupSharePoint -and ($null -eq $environment.SITEURL -or $force)){
 
 if ($setupApp){
     & "$PSScriptRoot\setup-app.ps1"  -force $force
+}
+
+if ($setupScheduler){
+    & "$PSScriptRoot\..\jobs\powershell\register.ps1"  -force $force
 }

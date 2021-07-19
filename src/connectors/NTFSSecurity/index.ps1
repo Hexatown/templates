@@ -1,2 +1,2 @@
-Import-Module -Name (join-path $PSScriptRoot  "NTFSSecurity") -DisableNameChecking
+Import-Module -Name (join-path $PSScriptRoot  "NTFSSecurity") -DisableNameChecking -Force
     
